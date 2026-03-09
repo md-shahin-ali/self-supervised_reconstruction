@@ -1,0 +1,43 @@
+# ============================================================
+# Requirements for:
+# Prospective Validation of Self-Supervised Spiral Variational
+# Manifold Learning for Upper-Airway Collapse Imaging
+# ============================================================
+# Install with:  pip install -r requirements.txt
+# Tested on:     Python 3.8–3.11, CUDA 11.8 / 12.1
+# GPU:           ≥16 GB VRAM recommended for 11-slice acquisition
+# ============================================================
+
+# --- Core deep learning ---
+torch>=2.0.0                  # Neural network, GPU computation, autograd
+torchvision>=0.15.0           # (optional) image utilities
+
+# --- Non-Cartesian MRI operators ---
+torchkbnufft>=1.4.0           # KbNufft, KbNufftAdjoint, ToepNufft, calc_toeplitz_kernel
+
+# --- MRI data I/O ---
+mat73>=0.62                   # Reading MATLAB v7.3 HDF5 .mat files
+
+# --- Coil sensitivity estimation ---
+sigpy>=0.1.26                 # sigpy.mri.JsenseRecon, sigpy.fft
+ismrmrdtools>=0.1.0           # coils.calculate_csm_inati_iter, calculate_csm_walsh
+
+# --- Scientific computing ---
+numpy>=1.23.0                 # Array operations throughout
+scipy>=1.10.0                 # scipy.linalg.eig, scipy.stats, scipy.ndimage
+scikit-learn>=1.2.0           # PCA for coil compression (sklearn.decomposition.PCA)
+
+# --- Image output ---
+imageio>=2.28.0               # GIF generation from magnitude frames (imageio.v2)
+matplotlib>=3.7.0             # Inline visualization during training, figure export
+
+# --- Utilities ---
+tqdm>=4.65.0                  # Progress bars
+h5py>=3.8.0                   # HDF5 file reading (imported in optimize_gen_sub)
+pickle5>=0.0.12; python_version < "3.8"  # pickle protocol 4 support (3.8+ built-in)
+
+# --- ESPIRiT coil maps ---
+# espirit is not on PyPI. Install from source:
+#   git clone https://github.com/mikgroup/espirit-python
+#   pip install -e espirit-python
+# Expected import: from espirit.espirit import espirit, fft
