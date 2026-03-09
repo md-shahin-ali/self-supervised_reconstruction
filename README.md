@@ -1,6 +1,6 @@
 # Prospective Validation of Self-Supervised Spiral Variational Manifold Learning for Upper-Airway Collapse Imaging
 
-**Magnetic Resonance in Medicine** | University of Iowa
+**Journal of Magnetic Resonance Imaging** | University of Iowa
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-orange?logo=pytorch)](https://pytorch.org/)
