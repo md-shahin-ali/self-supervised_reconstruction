@@ -21,7 +21,7 @@
 
 ## Abstract
 
-Dynamic upper-airway MRI during natural sleep can localize obstructive sleep apnea (OSA) collapse patterns, but practical multi-slice imaging is limited by long scan times and temporal blurring under acceleration. We develop and prospectively validate a **physics-guided, self-supervised spiral variational manifold reconstruction** for temporally precise, multi-slice upper-airway MRI — without external training data.
+Dynamic upper-airway MRI during natural sleep can localize obstructive sleep apnea (OSA) collapse patterns, but practical multi-slice imaging is limited by long scan times and temporal blurring under acceleration. We develop and prospectively validate a **physics-guided, self-supervised spiral variational manifold reconstruction** for temporally precise, multi-slice upper-airway MRI without external training data.
 
 Across 12 datasets (8 OSA patients during natural sleep + 4 healthy volunteers during Müller maneuver), the proposed method achieved **mean expert scores of 3.92 / 4.00 / 4.00** for aliasing, spatial blurring, and temporal blurring, significantly outperforming analysis manifold, compressed sensing, parallel imaging, and view sharing (*p* < 0.001). Temporal resolution: **183 ms/frame** across 11 concurrent axial slices.
 
