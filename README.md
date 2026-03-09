@@ -30,7 +30,7 @@ Across 12 datasets (8 OSA patients during natural sleep + 4 healthy volunteers d
 ## Method Overview
 
 <p align="center">
-  <img src="Figures/FIG1.png" width="90%" alt="Self-supervised pipeline overview"/>
+  <img src="images/FIG1.png" width="90%" alt="Self-supervised pipeline overview"/>
 </p>
 
 *The self-supervised pipeline splits acquired k-space into training and validation sets. A CNN generator learns from undersampled data, using latent vectors to encode temporal dynamics. Physics-guided early stopping prevents overfitting by monitoring the held-out validation loss — no fully sampled reference data required.*
@@ -48,8 +48,8 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Adaptive vs. Fixed Learning Rate
 
 <p align="center">
-  <img src="Figures/FIG4a.png" width="48%" alt="Fixed learning rate training"/>
-  <img src="Figures/FIG4b.png" width="48%" alt="Adaptive learning rate training"/>
+  <img src="images/FIG4a.png" width="48%" alt="Fixed learning rate training"/>
+  <img src="images/FIG4b.png" width="48%" alt="Adaptive learning rate training"/>
 </p>
 
 *Left: Fixed learning rate leads to overfitting and temporal artifacts at late epochs. Right: Validation-loss–guided adaptive learning rate stabilizes training and preserves temporal fidelity throughout optimization.*
