@@ -91,7 +91,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 <p align="center">
   <img src="images/FIG9.png" width="90%" alt="Expert scoring results"/>
 </p>
-
+<p align="center">
 | Method | Aliasing ↑ | Spatial Blurring ↑ | Temporal Blurring ↑ |
 |---|---|---|---|
 | **Self-Supervised (Ours)** | **3.92** | **4.00** | **4.00** |
@@ -99,7 +99,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 | View Sharing | 2.88 | 2.62 | 3.08 |
 | Compressed Sensing | 1.75 | 2.04 | 2.29 |
 | Parallel Imaging | 1.00 | 1.00 | 1.00 |
-
+</p>
 *Kruskal–Wallis: aliasing H=98.57, spatial H=82.18, temporal H=76.69 (all p<0.001). Scoring rubric: 1=unacceptable, 4=excellent.*
 
 ### Reconstruction Artifacts
