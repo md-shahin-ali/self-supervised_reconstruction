@@ -57,7 +57,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Effect of Validation-Set Splitting Distribution
 
 <p align="center">
-  <img src="Figures/FIG5.png" width="90%" alt="Effect of splitting distribution"/>
+  <img src="images/FIG5.png" width="90%" alt="Effect of splitting distribution"/>
 </p>
 
 *Comparison of right-skewed, left-skewed, normal, and uniform splitting strategies. Right-skewed allocation of high-frequency samples to the training set achieves the best SER (22.78 dB) and sharpest air–tissue boundaries.*
@@ -65,7 +65,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Prospective Reconstruction Comparison (OSA Patient, Natural Sleep)
 
 <p align="center">
-  <img src="Figures/FIG6.png" width="75%" alt="Reconstruction comparison"/>
+  <img src="images/FIG6.png" width="75%" alt="Reconstruction comparison"/>
 </p>
 
 *Mid-temporal spatiotemporal profiles from prospectively undersampled spiral data. The proposed self-supervised method preserves sharp air–tissue boundaries and smooth temporal evolution, outperforming parallel imaging, compressed sensing, view sharing, and analysis manifold.*
@@ -73,7 +73,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Correlation with Physiological Signals
 
 <p align="center">
-  <img src="Figures/FIG7.png" width="90%" alt="Physiological signal correlation"/>
+  <img src="images/FIG7.png" width="90%" alt="Physiological signal correlation"/>
 </p>
 
 *Dynamic airway reconstruction from OSA0001 alongside respiratory effort (red) and SpO₂ (green). The model detects genuine collapse events — reflected in a 2–5% drop in oxygen saturation — that other methods fail to capture.*
@@ -81,7 +81,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Temporal Airway Dynamics (12 Consecutive Frames)
 
 <p align="center">
-  <img src="Figures/FIG8.png" width="90%" alt="Temporal dynamics comparison"/>
+  <img src="images/FIG8.png" width="90%" alt="Temporal dynamics comparison"/>
 </p>
 
 *12-frame comparison for OSA0007, Slice 6. The self-supervised model consistently resolves two distinct airway structures with smooth temporal evolution (frames 4–11), while competing methods show noise, blurring, or loss of the secondary airway structure.*
@@ -89,7 +89,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Expert Image Quality Scores
 
 <p align="center">
-  <img src="Figures/FIG9.png" width="90%" alt="Expert scoring results"/>
+  <img src="images/FIG9.png" width="90%" alt="Expert scoring results"/>
 </p>
 
 | Method | Aliasing ↑ | Spatial Blurring ↑ | Temporal Blurring ↑ |
@@ -105,7 +105,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Reconstruction Artifacts
 
 <p align="center">
-  <img src="Figures/FIG10.png" width="90%" alt="Reconstruction artifacts"/>
+  <img src="images/FIG10.png" width="90%" alt="Reconstruction artifacts"/>
 </p>
 
 *Artifacts (red circles) were observed in only 8 of 136 reconstructed slices (5.88%), appearing as spurious signal intensities or localized distortions. These are rare but motivate future work on anatomy-aware regularization.*
