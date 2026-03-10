@@ -127,6 +127,8 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{t}$ to single-sli
 ├── generator_320.py             # CNN generator (320×320 complex-valued output)
 ├── latentVariable.py            # Latent variable module with KL and smoothness regularization
 ├── optimize_gen_sub.py          # Training loop with self-supervised early stopping
+├── espirit/                     # ESPIRiT coil sensitivity estimation
+├── ismrmrdtools/                # ISMRMRD tools for coil combination
 ├── Figures/                     # Paper figures
 ├── Data/                        # (Not included) Raw .mat k-space data
 ├── requirements.txt             # Python dependencies
