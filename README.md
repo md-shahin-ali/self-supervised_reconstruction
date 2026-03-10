@@ -135,11 +135,11 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 
 ### Module Descriptions
 
-**`dataOpNewKbnufft.py`** — Handles all data I/O and MRI forward/adjoint operators. Reads `.mat` or pickle k-space files, applies FOIVR-based virtual coil compression (PCA), estimates coil sensitivity maps via ESPIRiT / JSENSE / Inati / Walsh, precomputes Toeplitz kernels for fast NUFFT operations, and splits k-t data into disjoint training and validation sets using configurable distributions (right-skewed, left-skewed, normal, uniform).
+**`dataOpNewKbnufft.py`** — Handles all data I/O and MRI forward/adjoint operators. Reads `.mat` or pickle k-space files, applies virtual coil compression (PCA), estimates coil sensitivity maps via ESPIRiT / Walsh, precomputes Toeplitz kernels for fast NUFFT operations, and splits k-t data into disjoint training and validation sets using configurable distributions (right-skewed, left-skewed, normal, uniform).
 
 **`generator_320.py`** — Defines the `generatorNew` CNN module, a 10-layer convolutional architecture with nearest-neighbor upsampling that maps 30-dimensional latent vectors to complex-valued 320×320 image frames. Outputs real and imaginary channels separately, then recombines. Includes L1 weight regularization via `weightl1norm()`.
 
-**`latentVariable.py`** — Defines the `latentVariableNew` class managing the temporal latent trajectory $l_{s,t} \in \mathbb{R}^{N_\text{frames} \times 30 \times 1 \times 1 \times N_\text{slices}}$. Supports multiple initialization strategies (`ones`, `random`, `zeros`, `interpolate`). Implements KL divergence loss and temporal Tikhonov smoothness regularization.
+**`latentVariable.py`** — Defines the `latentVariableNew` class managing the temporal latent trajectory $l_{s,t} \in \mathbb{R}^{N_\text{frames} \times 30 \times 1 \times 1 \times N_\text{slices}}$. Implements KL divergence loss and temporal Tikhonov smoothness regularization.
 
 **`optimize_gen_sub.py`** — Main training loop. Jointly optimizes generator parameters and latent vectors using Adam with a `ReduceLROnPlateau` scheduler driven by the held-out validation loss. Includes per-epoch validation, divergence detection, and checkpoint saving at minimum validation loss.
 
@@ -152,7 +152,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Requirements
 
 - Python ≥ 3.8
-- CUDA-capable GPU (≥ 16 GB VRAM recommended for 11 slices)
+- CUDA-capable GPU (≥ 24 GB VRAM recommended for 800 frames)
 
 ### Setup
 
