@@ -184,7 +184,7 @@ Full list: see [`requirements.txt`](requirements.txt).
 Ensure that the required dependencies are installed (see `requirements.txt`). After that, specify your data path and reconstruction parameters in `main_reconstruction.ipynb` and run it accordingly. Feel free to adjust the reconstruction parameters, e.g., number of arms per frame, number of frames to reconstruct, latent vector size, and validation split ratio.
 
 ```bash
-python main_reconstruction.py
+python main_reconstruction.ipynb
 ```
 
 This code builds upon the self-supervised variational manifold framework. A preliminary retrospective sensitivity analysis of this method was presented at ISMRM 2025:
