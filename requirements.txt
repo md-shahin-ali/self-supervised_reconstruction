@@ -5,7 +5,7 @@
 # ============================================================
 # Install with:  pip install -r requirements.txt
 # Tested on:     Python 3.8–3.11, CUDA 11.8 / 12.1
-# GPU:           ≥16 GB VRAM recommended for 11-slice acquisition
+# GPU:           ≥24 GB VRAM recommended for 800 frames reconstruction per slice
 # ============================================================
 
 # --- Core deep learning ---
