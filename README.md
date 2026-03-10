@@ -122,12 +122,12 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 
 ```
 .
-├── main_reconstruction.py       # Main reconstruction script (one-cell, slices 1–11)
+├── main_reconstruction.ipynb    # Main reconstruction script
 ├── dataOpNewKbnufft.py          # Data loading, k-space operators, coil sensitivity estimation
 ├── generator_320.py             # CNN generator (320×320 complex-valued output)
 ├── latentVariable.py            # Latent variable module with KL and smoothness regularization
 ├── optimize_gen_sub.py          # Training loop with self-supervised early stopping
-├── Figures/                     # Paper figures (FIG1–FIG10)
+├── Figures/                     # Paper figures
 ├── Data/                        # (Not included) Raw .mat k-space data
 ├── requirements.txt             # Python dependencies
 └── README.md
@@ -143,7 +143,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 
 **`optimize_gen_sub.py`** — Main training loop. Jointly optimizes generator parameters and latent vectors using Adam with a `ReduceLROnPlateau` scheduler driven by the held-out validation loss. Includes per-epoch validation, divergence detection, and checkpoint saving at minimum validation loss.
 
-**`main_reconstruction.py`** — Top-level script orchestrating the full pipeline per slice: data loading → 10-epoch initial training → 150-epoch final training → complex frame generation → saving 320×320 and 120×120 `.mat` outputs → GIF creation from magnitude images.
+**`main_reconstruction.ipynb`** — Top-level script orchestrating the full pipeline per slice: data loading → 10-epoch initial training → 150-epoch final training → complex frame generation → saving 320×320 and 120×120 `.mat` outputs.
 
 ---
 
@@ -181,7 +181,7 @@ Full list: see [`requirements.txt`](requirements.txt).
 
 ## How to Run the Code
 
-Ensure that the required dependencies are installed (see `requirements.txt`). After that, specify your data path and reconstruction parameters in `main_reconstruction.py` and run it accordingly. Feel free to adjust the reconstruction parameters, e.g., number of arms per frame, number of frames to reconstruct, latent vector size, and validation split ratio.
+Ensure that the required dependencies are installed (see `requirements.txt`). After that, specify your data path and reconstruction parameters in `main_reconstruction.ipynb` and run it accordingly. Feel free to adjust the reconstruction parameters, e.g., number of arms per frame, number of frames to reconstruct, latent vector size, and validation split ratio.
 
 ```bash
 python main_reconstruction.py
@@ -189,7 +189,7 @@ python main_reconstruction.py
 
 This code builds upon the self-supervised variational manifold framework. A preliminary retrospective sensitivity analysis of this method was presented at ISMRM 2025:
 
-> M. S. Ali et al., "Sensitivity analysis of self-supervised variational manifold learning based accelerated dynamic upper-airway collapse MRI," *ISMRM 2025*, Abstract 2595. [[Link]](https://archive.ismrm.org/2025/2595.html)
+> 1. M. S. Ali et al., "Sensitivity analysis of self-supervised variational manifold learning based accelerated dynamic upper-airway collapse MRI," *ISMRM 2025*, Abstract 2595. [[Link]](https://archive.ismrm.org/2025/2595.html)
 
 ---
 
@@ -223,6 +223,6 @@ This work was supported by the **National Institutes of Health** under grant **N
 
 ---
 
-## License
+## Contact
 
-This project is licensed under the MIT License — see [LICENSE](LICENSE) for details.
+This repository is intended to support reproducible research. If you encounter any issues or have questions about the code, feel free to open a GitHub issue or reach out directly at [mdshahin-ali@uiowa.edu](mailto:mdshahin-ali@uiowa.edu)
