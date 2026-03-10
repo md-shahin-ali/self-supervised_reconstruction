@@ -157,8 +157,8 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Setup
 
 ```bash
-git clone https://github.com/[<your-username>/<repo-name>](https://github.com/md-shahin-ali/self-supervised_reconstruction.git
-cd <self-supervised_reconstruction>
+git clone https://github.com/md-shahin-ali/self-supervised_reconstruction.git
+cd self-supervised_reconstruction
 pip install -r requirements.txt
 ```
 
