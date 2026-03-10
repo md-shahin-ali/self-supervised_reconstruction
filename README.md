@@ -37,9 +37,9 @@ Across 12 datasets (8 OSA patients during natural sleep + 4 healthy volunteers d
 
 The reconstruction solves:
 
-$$C(\theta, l_{s,t}) = \sum_{s,t} \| \mathsf{E}_{\Gamma,s,t}(G_\theta(l_{s,t})) - \Omega(\Gamma) \|_2^2 + \sigma^2 R^{\text{scale}}_{l_{s,t}} + \lambda_1 R_{G_\theta} + \lambda_2 R^{\text{temporal Tikhonov}}_{l_{s,t}}$$
+$$C(\theta, l_{t}) = \sum_{t} \| \mathsf{E}_{\Gamma,t}(G_\theta(l_{t})) - \Omega(\Gamma) \|_2^2 + \sigma^2 R^{\text{scale}}_{l_{t}} + \lambda_1 R_{G_\theta} + \lambda_2 R^{\text{temporal Tikhonov}}_{l_{t}}$$
 
-where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-slice image volumes, $\Gamma$ is the training mask, and the terms enforce data consistency, variational latent prior, generator regularization, and temporal smoothness.
+where $G_\theta$ is a CNN generator mapping latent vectors $l_{t}$ to single-slice frame volumes, $\Gamma$ is the training mask, and the terms enforce data consistency, variational latent prior, generator regularization, and temporal smoothness.
 
 ---
 
