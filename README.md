@@ -33,7 +33,7 @@ Across 12 datasets (8 OSA patients during natural sleep + 4 healthy volunteers d
   <img src="Figures/FIG1.png" width="90%" alt="Self-supervised pipeline overview"/>
 </p>
 
-*The self-supervised pipeline splits acquired k-space into training and validation sets. A CNN generator learns from undersampled data, using latent vectors to encode temporal dynamics. Physics-guided early stopping prevents overfitting by monitoring the held-out validation loss — no fully sampled reference data required.*
+*Figure 1: The self-supervised pipeline splits acquired k-space into training and validation sets. A CNN generator learns from undersampled data, using latent vectors to encode temporal dynamics. Physics-guided early stopping prevents overfitting by monitoring the held-out validation loss — no fully sampled reference data required.*
 
 The reconstruction solves:
 
@@ -52,7 +52,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
   <img src="Figures/FIG4b.png" width="48%" alt="Adaptive learning rate training"/>
 </p>
 
-*Left: Fixed learning rate leads to overfitting and temporal artifacts at late epochs. Right: Validation-loss–guided adaptive learning rate stabilizes training and preserves temporal fidelity throughout optimization.*
+*Figure 2: Left: Fixed learning rate leads to overfitting and temporal artifacts at late epochs. Right: Validation-loss–guided adaptive learning rate stabilizes training and preserves temporal fidelity throughout optimization.*
 
 ### Effect of Validation-Set Splitting Distribution
 
@@ -60,7 +60,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
   <img src="Figures/FIG5.png" width="90%" alt="Effect of splitting distribution"/>
 </p>
 
-*Comparison of right-skewed, left-skewed, normal, and uniform splitting strategies. Right-skewed allocation of high-frequency samples to the training set achieves the best SER (22.78 dB) and sharpest air–tissue boundaries.*
+*Figure 3: Comparison of right-skewed, left-skewed, normal, and uniform splitting strategies. Right-skewed allocation of high-frequency samples to the training set achieves the best SER (22.78 dB) and sharpest air–tissue boundaries.*
 
 ### Prospective Reconstruction Comparison (OSA Patient, Natural Sleep)
 
@@ -68,7 +68,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
   <img src="Figures/FIG6.png" width="75%" alt="Reconstruction comparison"/>
 </p>
 
-*Mid-temporal spatiotemporal profiles from prospectively undersampled spiral data. The proposed self-supervised method preserves sharp air–tissue boundaries and smooth temporal evolution, outperforming parallel imaging, compressed sensing, view sharing, and analysis manifold.*
+*Figure 4: Mid-temporal spatiotemporal profiles from prospectively undersampled spiral data. The proposed self-supervised method preserves sharp air–tissue boundaries and smooth temporal evolution, outperforming parallel imaging, compressed sensing, view sharing, and analysis manifold.*
 
 ### Correlation with Physiological Signals
 
@@ -76,7 +76,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
   <img src="Figures/FIG7.png" width="90%" alt="Physiological signal correlation"/>
 </p>
 
-*Dynamic airway reconstruction from OSA0001 alongside respiratory effort (red) and SpO₂ (green). The model detects genuine collapse events — reflected in a 2–5% drop in oxygen saturation — that other methods fail to capture.*
+*Figure 5: Dynamic airway reconstruction from OSA0001 alongside respiratory effort (red) and SpO₂ (green). The model detects genuine collapse events — reflected in a 2–5% drop in oxygen saturation — that other methods fail to capture.*
 
 ### Temporal Airway Dynamics (12 Consecutive Frames)
 
@@ -84,13 +84,15 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
   <img src="Figures/FIG8.png" width="90%" alt="Temporal dynamics comparison"/>
 </p>
 
-*12-frame comparison for OSA0007, Slice 6. The self-supervised model consistently resolves two distinct airway structures with smooth temporal evolution (frames 4–11), while competing methods show noise, blurring, or loss of the secondary airway structure.*
+*Figure 6: 12-frame comparison for OSA0007, Slice 6. The self-supervised model consistently resolves two distinct airway structures with smooth temporal evolution (frames 4–11), while competing methods show noise, blurring, or loss of the secondary airway structure.*
 
 ### Expert Image Quality Scores
 
 <p align="center">
   <img src="Figures/FIG9.png" width="90%" alt="Expert scoring results"/>
 </p>
+
+*Figure 7: Expert image quality scores (1 = unacceptable, 2 = adequate, 3 = good, 4 = excellent) across aliasing, spatial blurring, and temporal blurring for 12 datasets. The proposed self-supervised method achieves the highest scores in all three categories (Kruskal–Wallis, p < 0.001).*
 
 <div align="center">
 
@@ -112,7 +114,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
   <img src="Figures/FIG10.png" width="90%" alt="Reconstruction artifacts"/>
 </p>
 
-*Artifacts (red circles) were observed in only 8 of 136 reconstructed slices (5.88%), appearing as spurious signal intensities or localized distortions. These are rare but motivate future work on anatomy-aware regularization.*
+*Figure 8: Artifacts (red circles) were observed in only 8 of 136 reconstructed slices (5.88%), appearing as spurious signal intensities or localized distortions. These are rare but motivate future work on anatomy-aware regularization.*
 
 ---
 
@@ -155,8 +157,8 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 ### Setup
 
 ```bash
-git clone https://github.com/<your-username>/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/[<your-username>/<repo-name>](https://github.com/md-shahin-ali/self-supervised_reconstruction.git
+cd <self-supervised_reconstruction>
 pip install -r requirements.txt
 ```
 
