@@ -43,7 +43,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 
 ---
 
-## Results
+## 📊 Results
 
 ### Adaptive vs. Fixed Learning Rate
 
@@ -118,7 +118,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 
 ---
 
-## Repository Structure
+## 🗂️ Repository Structure
 
 ```
 .
@@ -147,7 +147,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{s,t}$ to multi-sl
 
 ---
 
-## Installation
+## ⚙️ Installation
 
 ### Requirements
 
@@ -179,7 +179,7 @@ Full list: see [`requirements.txt`](requirements.txt).
 
 ---
 
-## How to Run the Code
+## 🚀 How to Run the Code
 
 Ensure that the required dependencies are installed (see `requirements.txt`). After that, specify your data path and reconstruction parameters in `main_reconstruction.ipynb` and run it accordingly. Feel free to adjust the reconstruction parameters, e.g., number of arms per frame, number of frames to reconstruct, latent vector size, and validation split ratio.
 
@@ -199,7 +199,7 @@ The OSA patient data used in this study cannot be publicly released due to IRB a
 
 ---
 
-## Citation
+## 📄 Citation
 
 If you use this code or method in your research, please cite:
 
@@ -217,12 +217,12 @@ If you use this code or method in your research, please cite:
 
 ---
 
-## Acknowledgements
+## 🙏 Acknowledgements
 
 This work was supported by the **National Institutes of Health** under grant **NIH NHLBI R01 HL173483**. MRI data were acquired on an instrument funded by NIH-S10 instrumentation grant **1S10OD025025-01**.
 
 ---
 
-## Contact
+## 📬 Contact
 
 This repository is intended to support reproducible research. If you encounter any issues or have questions about the code, feel free to open a GitHub issue or reach out directly at [mdshahin-ali@uiowa.edu](mailto:mdshahin-ali@uiowa.edu)
