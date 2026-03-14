@@ -45,30 +45,13 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{t}$ to single-sli
 
 ## 📊 Results
 
-### Adaptive vs. Fixed Learning Rate
-
-<p align="center">
-  <img src="Figures/FIG4a.png" width="48%" alt="Fixed learning rate training"/>
-  <img src="Figures/FIG4b.png" width="48%" alt="Adaptive learning rate training"/>
-</p>
-
-*Figure 2: Left: Fixed learning rate leads to overfitting and temporal artifacts at late epochs. Right: Validation-loss–guided adaptive learning rate stabilizes training and preserves temporal fidelity throughout optimization.*
-
-### Effect of Validation-Set Splitting Distribution
-
-<p align="center">
-  <img src="Figures/FIG5.png" width="90%" alt="Effect of splitting distribution"/>
-</p>
-
-*Figure 3: Comparison of right-skewed, left-skewed, normal, and uniform splitting strategies. Right-skewed allocation of high-frequency samples to the training set achieves the best SER (22.78 dB) and sharpest air–tissue boundaries.*
-
 ### Prospective Reconstruction Comparison (OSA Patient, Natural Sleep)
 
 <p align="center">
   <img src="Figures/FIG6.png" width="75%" alt="Reconstruction comparison"/>
 </p>
 
-*Figure 4: Mid-temporal spatiotemporal profiles from prospectively undersampled spiral data. The proposed self-supervised method preserves sharp air–tissue boundaries and smooth temporal evolution, outperforming parallel imaging, compressed sensing, view sharing, and analysis manifold.*
+*Figure 2: Mid-temporal spatiotemporal profiles from prospectively undersampled spiral data. The proposed self-supervised method preserves sharp air–tissue boundaries and smooth temporal evolution, outperforming parallel imaging, compressed sensing, view sharing, and analysis manifold.*
 
 ### Correlation with Physiological Signals
 
@@ -76,7 +59,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{t}$ to single-sli
   <img src="Figures/FIG7.png" width="90%" alt="Physiological signal correlation"/>
 </p>
 
-*Figure 5: Dynamic airway reconstruction from OSA0001 alongside respiratory effort (red) and SpO₂ (green). The model detects genuine collapse events — reflected in a 2–5% drop in oxygen saturation — that other methods fail to capture.*
+*Figure 3: Dynamic airway reconstruction from OSA0001 alongside respiratory effort (red) and SpO₂ (green). The model detects genuine collapse events — reflected in a 2–5% drop in oxygen saturation — that other methods fail to capture.*
 
 ### Temporal Airway Dynamics (12 Consecutive Frames)
 
@@ -84,37 +67,7 @@ where $G_\theta$ is a CNN generator mapping latent vectors $l_{t}$ to single-sli
   <img src="Figures/FIG8.png" width="90%" alt="Temporal dynamics comparison"/>
 </p>
 
-*Figure 6: 12-frame comparison for OSA0007, Slice 6. The self-supervised model consistently resolves two distinct airway structures with smooth temporal evolution (frames 4–11), while competing methods show noise, blurring, or loss of the secondary airway structure.*
-
-### Expert Image Quality Scores
-
-<p align="center">
-  <img src="Figures/FIG9.png" width="90%" alt="Expert scoring results"/>
-</p>
-
-*Figure 7: Expert image quality scores (1 = unacceptable, 2 = adequate, 3 = good, 4 = excellent) across aliasing, spatial blurring, and temporal blurring for 12 datasets. The proposed self-supervised method achieves the highest scores in all three categories (Kruskal–Wallis, p < 0.001).*
-
-<div align="center">
-
-| Method | Aliasing ↑ | Spatial Blurring ↑ | Temporal Blurring ↑ |
-|:---:|:---:|:---:|:---:|
-| **Self-Supervised (Ours)** | **3.92** | **4.00** | **4.00** |
-| Analysis Manifold | 3.42 | 3.17 | 2.25 |
-| View Sharing | 2.88 | 2.62 | 3.08 |
-| Compressed Sensing | 1.75 | 2.04 | 2.29 |
-| Parallel Imaging | 1.00 | 1.00 | 1.00 |
-
-</div>
-
-*Table 1: Kruskal–Wallis: aliasing H=98.57, spatial H=82.18, temporal H=76.69 (all p<0.001).*
-
-### Reconstruction Artifacts
-
-<p align="center">
-  <img src="Figures/FIG10.png" width="90%" alt="Reconstruction artifacts"/>
-</p>
-
-*Figure 8: Artifacts (red circles) were observed in only 8 of 136 reconstructed slices (5.88%), appearing as spurious signal intensities or localized distortions. These are rare but motivate future work on anatomy-aware regularization.*
+*Figure 4: 12-frame comparison for OSA0007, Slice 6. The self-supervised model consistently resolves two distinct airway structures with smooth temporal evolution (frames 4–11), while competing methods show noise, blurring, or loss of the secondary airway structure.*
 
 ---
 
@@ -183,15 +136,16 @@ Full list: see [`requirements.txt`](requirements.txt).
 
 ## 🚀 How to Run the Code
 
-Ensure that the required dependencies are installed (see `requirements.txt`). After that, specify your data path and reconstruction parameters in `main_reconstruction.ipynb` and run it accordingly. Feel free to adjust the reconstruction parameters, e.g., number of arms per frame, number of frames to reconstruct, latent vector size, and validation split ratio.
-
+Ensure that the required dependencies are installed (see `requirements.txt`). After that, specify your data path and reconstruction parameters in `main_reconstruction.py` and run it accordingly. Feel free to adjust the reconstruction parameters, e.g., number of arms per frame, number of frames to reconstruct, latent vector size, and validation split ratio.
 ```bash
-python main_reconstruction.ipynb
+python main_reconstruction.py
 ```
 
-This code builds upon the self-supervised variational manifold framework. A preliminary retrospective sensitivity analysis of this method was presented at ISMRM 2025:
+This code builds upon the self-supervised variational manifold framework. Related conference abstracts from this line of work:
 
-> 1. M. S. Ali et al., "Sensitivity analysis of self-supervised variational manifold learning based accelerated dynamic upper-airway collapse MRI," *ISMRM 2025*, Abstract 2595. [[Link]](https://archive.ismrm.org/2025/2595.html)
+> 1. M. S. Ali et al., "Prospective validation of self-supervised spiral variational manifold learning for upper-airway collapse imaging," *ISMRM Workshop on Data Sampling and Image Reconstruction 2026*, Abstract 00243. [[Link]](https://echo.ismrm.org/abstracts/view/98d6f8bd-452e-4b21-9633-6c5434e4c661)
+> 2. W. Alam et al., "Accelerated 3D dynamic upper-airway MRI in naturally sleeping obstructive sleep apnea patients," *ISMRM 2023*, Abstract 3078. [[Link]](https://archive.ismrm.org/2023/3078.html)
+> 3. M. S. Ali et al., "Sensitivity analysis of self-supervised variational manifold learning based accelerated dynamic upper-airway collapse MRI," *ISMRM 2025*, Abstract 2595. [[Link]](https://archive.ismrm.org/2025/2595.html)
 
 ---
 
