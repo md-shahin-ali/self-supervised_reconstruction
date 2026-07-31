@@ -11,7 +11,7 @@
 >
 > <sup>1</sup>Roy J. Carver Department of Biomedical Engineering, University of Iowa  
 > <sup>2</sup>Department of Electrical and Computer Engineering, University of Virginia  
-> <sup>3</sup>Department of Radiology, University of Wisconsin, Madison
+> <sup>3</sup>Department of Radiology, University of Wisconsin, Madison<br>
 > <sup>4</sup>Department of Otolaryngology, University of Iowa 
 > <sup>5</sup>Department of Neurology, University of Iowa  
 > <sup>6</sup>Department of Radiology, University of Iowa  
