@@ -7,13 +7,14 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![NIH](https://img.shields.io/badge/Funding-NIH%20NHLBI%20R01%20HL173483-red)](https://www.nih.gov/)
 
-> **Md Shahin Ali<sup>1</sup>, Wahidul Alam<sup>1</sup>, Mathews Jacob<sup>2</sup>, Douglas Van Daele<sup>3</sup>, Junjie Liu<sup>4</sup>, Sajan Goud Lingala<sup>1,5</sup>**
+> **Md Shahin Ali<sup>1</sup>, Wahidul Alam<sup>1</sup>, Mathews Jacob<sup>2</sup>, Sarv Priya<sup>3</sup>, Douglas Van Daele<sup>4</sup>, Junjie Liu<sup>5</sup>, Sajan Goud Lingala<sup>1,6</sup>**
 >
 > <sup>1</sup>Roy J. Carver Department of Biomedical Engineering, University of Iowa  
 > <sup>2</sup>Department of Electrical and Computer Engineering, University of Virginia  
-> <sup>3</sup>Department of Otolaryngology, University of Iowa  
-> <sup>4</sup>Department of Neurology, University of Iowa  
-> <sup>5</sup>Department of Radiology, University of Iowa  
+> <sup>3</sup>Department of Radiology, University of Wisconsin, Madison
+> <sup>4</sup>Department of Otolaryngology, University of Iowa 
+> <sup>5</sup>Department of Neurology, University of Iowa  
+> <sup>6</sup>Department of Radiology, University of Iowa  
 >
 > Correspondence: [sajangoud-lingala@uiowa.edu](mailto:sajangoud-lingala@uiowa.edu)
 
